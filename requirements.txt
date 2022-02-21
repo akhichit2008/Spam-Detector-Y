@@ -1,0 +1,5 @@
+Flask
+regex
+scikit-learn
+numpy
+nltk
