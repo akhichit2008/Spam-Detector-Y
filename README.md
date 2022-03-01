@@ -1,4 +1,4 @@
-# Spam-Detector-Y
+# Spam-Detector-Y 📩
 Spam Detector for detecting spam emails and SMS. Written in python. Uses Machine Learning for detection.
 
 ## Platforms
