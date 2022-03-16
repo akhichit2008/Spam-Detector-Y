@@ -35,7 +35,11 @@ Features of SpamDetectY are as follows :-
 
 
 *   Github - https://github.com/akhichit2008/Spam-Detector-Y/
-*   Manual - https://github.com/akhichit2008/Spam-Detector-Y/blob/main/README.md
+
+# A Short Intro Video
+
+Short Intro Video Link :- https://user-images.githubusercontent.com/88311744/158656627-406f436e-8be2-4380-9fc8-03268d4b13b6.mp4
+---
 
 **Import - "Libraries and Frameworks"**
 """
@@ -102,6 +106,8 @@ print("Acc {}".format(accuracy_score(y_test,prediction)))
 
 """**Method for use in and by the api**"""
 
+# Still in progress
+'''
 def use_model(data,model):
   if type(data) == dict:
     df = pd.DataFrame(data,index=[0])
@@ -113,6 +119,7 @@ def use_model(data,model):
   pre = model.predict(data)
   print(classification_report(data,pre))
   print("Acc {}".format(accuracy_score(data,pre)))
+'''
 
 """**Packaging the model to a binary file**"""
 
@@ -120,14 +127,3 @@ final_model = mdl
 with open("sdy.bin","wb") as md_file:
     pickle.dump(final_model,md_file)
     md_file.close()
-
-"""Testing api method locally inside of the same notebook"""
-
-data = {
-    "message":"This is spam"
-}
-with open("/content/sdy.bin","rb") as md_file:
-  model = pickle.load(md_file)
-  md_file.close()
-pre = use_model(data,model) 
-print(pre)
