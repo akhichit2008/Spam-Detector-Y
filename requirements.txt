@@ -1,5 +1,4 @@
 Flask
-regex
-scikit-learn
 numpy
+scikit-learn
 nltk
